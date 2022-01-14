@@ -18,6 +18,57 @@ main{
     margin-top: 21px;
     /* height: 679px; */
 }
+/* -------navigation bar styling------- */
+#header{
+    background-color: #562EFF;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+.header-container{
+    width: 860px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+}
+.header-container .logo img{
+    width: 40px;
+    margin-right: 5px;
+}
+.navbar ul{
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+.navbar ul li{
+    list-style: none;
+    margin-right: 36px;
+    border-bottom: 3px solid #562EFF;
+    transition: .5s all ease;
+}
+.navbar ul .last-child{
+    margin-right: 0;
+}
+.last-child img{
+    position: relative;
+    top: 4px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+.navbar ul li:hover{
+    border-bottom: 3px solid #fff;
+}
 
 /* top players style */
 .top-players{
@@ -41,6 +92,11 @@ main{
 .player img{
     width: 56px;
     height: 56px;
+    
+}
+.player img:hover{
+    border: 3px solid royalblue;
+    border-radius: 40px;
 }
 .player-name{
     font-size: 18px;
@@ -59,6 +115,9 @@ hr{
 /* top blog styles */
 .blog{
     display: flex;
+    padding: 10px;
+    box-shadow: 5px 10px 18px #d3cece;
+    border-radius: 10px;
 }
 .blog .thumbnail img{
     width: 177px;
@@ -89,6 +148,12 @@ hr{
     grid-template-columns: repeat(3 , 1fr);
     grid-column-gap: 24px;
 }
+.course{
+   padding: 10px;
+   margin-bottom: 22px ;
+   box-shadow: 5px 10px 18px #d3cece;
+   border-radius: 10px;
+}
 .course-info{
     display: flex;
     align-items: center;
@@ -103,14 +168,28 @@ hr{
 .fa-star.empty{
     color: #AEAEAE;
 }
-.course-duration{
-
+.fa-clock{
+    background-color: #FEE5DF;
+    color: #ED6B4F;
+    padding: 5px;
+    border-radius: 30px;
 }
+
+
 /* ------media queries----- */
 /* mobile devices */
 @media only screen and (max-width:688px) {
     .container{
         width: 100%;
+    }
+    .header-container{
+        padding: 0 2%;
+    }
+    .navbar ul li{
+        margin-right: 5px;
+    }
+    .section-title{
+        text-align: center;
     }
     .players, .blogs , .courses{
         grid-template-columns: repeat(1 , 1fr);
